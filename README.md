@@ -1,5 +1,8 @@
 # codeman_hw_3
 for home work 3
+
+use db port : 5431 http port : 3002
+
 Homework: Data Persistence
 Goal
 Go to this link https://docs.google.com/document/d/1eqTveyufrS7FejoebA1v4XqA7-xUNZFyIdNoJaXcjnc/edit?usp=sharing
