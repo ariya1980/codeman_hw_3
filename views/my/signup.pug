@@ -1,0 +1,17 @@
+extends ../layout
+
+block title
+    = `Twitter Clone Application - Sign Up`
+
+block content
+    h1.title Twitter Sign Up
+        form(action="/twitter/users",method="POST")
+            .field
+                .control
+                    input.input(name="username")
+            .field
+                .control
+                    input.input(name="password")
+            .field
+                .control
+                    button.button.is-link.is-fullwith sign up

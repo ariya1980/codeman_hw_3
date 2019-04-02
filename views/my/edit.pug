@@ -1,0 +1,40 @@
+extends ../layout
+
+block title 
+    = `Edit Twitter`
+
+block content
+    h1.title Edit Twitter
+    #list
+        .columns
+                .column 
+                        .card
+                            header.card-header
+                                    p.card-header-title
+                                        | message :
+                                        = tweets.tweet  
+                                        br
+                                        | time :
+                                        = tweets.createdAt 
+                                        br 
+                                        | by :
+                                        = tweets.username 
+                        .column 
+                            form(action=`/twitter/tweets/${tweets.username}/${tweets.id}` method="POST") 
+                                .field
+                                    .control    
+                                        input.input(name="tweetEdit")
+                                .field
+                                    .control   
+                                        input.input(type="hidden", name="_method", value="PUT")
+                                .field
+                                    .control
+                                         button.button.is-link.is-fullwidth Save
+                        .column 
+                            form(action=`/twitter/tweets/${tweets.username}/${tweets.id}` method="POST")
+                                .field
+                                    .control   
+                                        input.input(type="hidden", name="_method", value="DELETE")
+                                .field
+                                    .control
+                                        button.button.is-link.is-fullwidth Delete              
